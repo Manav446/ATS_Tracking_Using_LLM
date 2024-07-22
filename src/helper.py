@@ -35,7 +35,7 @@ class Helper:
     def get_model(self):
         logger.info("Loading Gemini model.......")
         try:
-            llm_model = ChatGoogleGenerativeAI(
+            self.llm_model = ChatGoogleGenerativeAI(
                 google_api_key = get_gemini_api_key(), 
                 model = constants.LLM_MODEL_NAME,
                 temperature = constants.LLM_MODEL_TEMPERATURE_VALUE, 
@@ -44,7 +44,7 @@ class Helper:
             )
         except Exception as e:
             raise CustomException(e, sys)
-        return llm_model
+        return self.llm_model
     
     def get_prompt(self):
         logger.info("Getting the prompt for LLM model.........")
@@ -65,14 +65,14 @@ class Helper:
             {{"JD Match":"%", "MissingKeywords:[]", "Profile Summary":"", "applicable": ""}}
             """
         
-            prompt_template = PromptTemplate(
+            self.prompt_template = PromptTemplate(
                 input_variables=["resume_content", "job_description"],
                 template=input_prompt
             )
         
         except Exception as e:
             raise CustomException(e, sys)
-        return prompt_template
+        return self.prompt_template
         
     
     def get_chain(self):
