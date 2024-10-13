@@ -1,7 +1,3 @@
-Here's a concise description for your GitHub README for the resume scanning application:
-
----
-
 # Resume Scanning Application
 
 This repository hosts a Resume Scanning Application that utilizes the Grmini API to analyze resumes against job descriptions. The application provides a selection percentage and suggests improvements to enhance the alignment between the resume and the desired job profile.
