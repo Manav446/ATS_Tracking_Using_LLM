@@ -29,3 +29,52 @@ To get started with this project, clone the repository and follow the installati
 Contributions are welcome! If you have ideas for enhancements or new features, please open an issue or submit a pull request.
 
 ---
+
+
+# How to run?
+### STEPS:
+
+Clone the repository
+
+```bash / CMD
+Project repo: https://github.com/Manav446/Source-Code_Analysis_Using_Gen_AI.git
+```
+### STEP 01- Create a conda environment after opening the repository
+
+```bash / CMD
+conda create -n llmapp python=3.8 -y
+or you below command
+python -m venv <envirnoment_name>
+```
+
+```bash / CMD
+conda activate <envirnoment_name>
+or
+<envirnoment_name>\Scripts\activate 
+```
+
+
+### STEP 02- install the requirements
+```bash / CMD
+pip install -r requirements.txt
+```
+
+
+### Create a `.env` file in the root directory and add your GEMINI_API_KEY credentials as follows:
+
+```ini
+GEMINI_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+```
+
+
+```bash / CMD
+# Finally run the following command
+python app.py
+```
+
+Now,
+```bash / CMD
+open up localhost:
+```
+
+### I have utilized the Google Gemini Open Source API for this project. However, you can choose to use any API that suits your needs, including the OpenAI API or Hugging Face models.
